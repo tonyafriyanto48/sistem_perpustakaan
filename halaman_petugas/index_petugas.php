@@ -142,15 +142,14 @@
     <body>
 
         <?php
-                    
-      $page = @$_GET['p'];
-      $page = explode("-", $page);
-      if(count($page)>1){
-          $page = $page[1];
-      }else{
-          $page = $page[0];
-      }
-  ?>
+        $page = @$_GET['p'];
+        $page = explode('-', $page);
+        if (count($page) > 1) {
+            $page = $page[1];
+        } else {
+            $page = $page[0];
+        }
+        ?>
         <!-- nav bar -->
         <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">WEB PERPUSTAKAAN</a>
@@ -162,8 +161,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link <?= $page==''||$page=='beranda'?'active':'' ?>" href="?p=beranda"> <i
-                                class="fa fa-home"></i>Home </a>
+                        <a class="nav-link <?= $page == '' || $page == 'beranda'
+                            ? 'active'
+                            : '' ?>" href="?p=beranda"> <i class="fa fa-home"></i>Home </a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -171,10 +171,14 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-book"> </i> Data Buku </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?= $page==''||$page=='daftar-buku'?'active':'' ?>"
-                                href="?p=daftar-buku">Tabel Data Buku</a>
-                            <a class="dropdown-item <?= $page==''||$page=='input-buku'?'active':'' ?>"
-                                href="?p=input-buku"> Input Buku Baru</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'daftar-buku'
+                                ? 'active'
+                                : '' ?>" href="?p=daftar-buku">Tabel Data Buku</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'input-buku'
+                                ? 'active'
+                                : '' ?>" href="?p=input-buku"> Input Buku Baru</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -182,10 +186,14 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-handshake"> </i> Data Pinjam </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?= $page==''||$page=='peminjaman'?'active':'' ?>"
-                                href="?p=peminjaman">Daftar Peminjam</a>
-                            <a class="dropdown-item <?= $page==''||$page=='input-peminjaman'?'active':'' ?>"
-                                href="?p=input-peminjaman"> Input Peminjam Baru</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'peminjaman'
+                                ? 'active'
+                                : '' ?>" href="?p=peminjaman">Daftar Peminjam</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'input-peminjaman'
+                                ? 'active'
+                                : '' ?>" href="?p=input-peminjaman"> Input Peminjam Baru</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -193,10 +201,14 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-id-badge"> </i> Data siswa</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?= $page==''||$page=='data-siswa'?'active':'' ?>"
-                                href="?p=data-siswa">Daftar Siswa</a>
-                            <a class="dropdown-item <?= $page==''||$page=='input-siswa'?'active':'' ?>"
-                                href="?p=input-siswa"> Input Siswa Baru</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'data-siswa'
+                                ? 'active'
+                                : '' ?>" href="?p=data-siswa">Daftar Siswa</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'input-siswa'
+                                ? 'active'
+                                : '' ?>" href="?p=input-siswa"> Input Siswa Baru</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -204,10 +216,14 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-file"> </i> Laporan</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item <?= $page==''||$page=='laporan_peminjaman'?'active':'' ?>"
-                                href="?p=laporan_peminjaman">Laporan Peminjaman</a>
-                            <a class="dropdown-item <?= $page==''||$page=='input-buku'?'active':'' ?>"
-                                href="?p=input-buku"> Laporan Siswa Masuk</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'laporan_peminjaman'
+                                ? 'active'
+                                : '' ?>" href="?p=laporan_peminjaman">Laporan Peminjaman</a>
+                            <a class="dropdown-item <?= $page == '' ||
+                            $page == 'input-buku'
+                                ? 'active'
+                                : '' ?>" href="?p=input-buku"> Laporan Siswa Masuk</a>
                         </div>
                     </li>
                 </ul>
@@ -231,19 +247,19 @@
         <!-- End of Navigation Bar -->
 
         <!--- remote koneksi---->
-        <?php               
-    $page = @$_GET['p'];
-    $page = explode("-", $page);
-    if(count($page)>1){
-        $page = $page[1];
-    }else{
-        $page = $page[0];
-    }
-    ?>
+        <?php
+        $page = @$_GET['p'];
+        $page = explode('-', $page);
+        if (count($page) > 1) {
+            $page = $page[1];
+        } else {
+            $page = $page[0];
+        }
+        ?>
         <!--- remote koneksi---->
 
         <!-- isi -->
-        <?php include "koneksi-petugas.php" ?>
+        <?php include 'koneksi-petugas.php'; ?>
         <!-- tutup isi -->
     </body>
 
